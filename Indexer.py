@@ -40,7 +40,7 @@ class Indexer(object):
                '''
                This function takes a string argument and uses a map/filter transform on it, returning a alphanumeric, all lower case tokenized list. 
                '''
-               ALPHANUMERICS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz ';
+               ALPHANUMERICS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
                def alphaNumericMapping(token: str) -> str:
                     '''
                     This function utilizes lambda to check if a char in a token is alphanumeric, filtering the token and returning a token that is 
