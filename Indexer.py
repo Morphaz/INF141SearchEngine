@@ -49,7 +49,7 @@ class Indexer(object):
                     return ''.join(filter(lambda x: x in ALPHANUMERICS, token)).lower() 
                with open("stopWords.txt") as sWF:
                     stopWords = sWF.read().split("\n")
-               return list(filter(lambda x: x not in stopWords,map(alphaNumericMapping,filter(lambda x: 2<len(x)<16,text.split(' ')))))
+               return list(filter(lambda x: x not in stopWords,map(alphaNumericMapping,filter(lambda x: 0<len(x)<50,text.split(' ')))))
           
           with open('FileDump'+'/'+doc) as jsonDoc:
                parsedJson = json.loads(jsonDoc.read())
