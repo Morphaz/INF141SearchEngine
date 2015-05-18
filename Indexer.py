@@ -1,13 +1,15 @@
 '''
 Created on May 12, 2015
+Python 3.4
 Kyle Vonderwerth
 INF 141: Search Engine Milestone 1
-Python 3.4
 '''
 from collections import defaultdict
 import json, os
 
 class Indexer(object):
+     '''
+     An implimination of the 
      version = '0.1'
      
      def __init__(self,directory):
