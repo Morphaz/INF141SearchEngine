@@ -1,6 +1,6 @@
 '''
 Created on May 12, 2015
-Kyle Vonderwerth, Jenny Tang
+Kyle Vonderwerth, Jenny Tang, Stephen Em
 INF 141: Search Engine Milestone 1
 Python 3.4
 '''
