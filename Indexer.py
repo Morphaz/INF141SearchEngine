@@ -9,7 +9,7 @@ import json, os
 
 class Indexer(object):
      '''
-     An implimination of Single-pass in-memory indexing where the return index posts to termID -> docID : termInDocFrequency
+     An implemintation of Single-pass in-memory indexing where the return index posts to termID -> docID : termInDocFrequency
      '''
      version = '0.1'
      
