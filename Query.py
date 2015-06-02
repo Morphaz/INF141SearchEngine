@@ -87,7 +87,6 @@ class Search(object):
           '''
           get doc context for top 10 results
           '''
-          print(results)
           def parseText(doc):
                '''
                parse text from json object and tokneize to create terms
@@ -160,7 +159,4 @@ class Search(object):
           return self.getContextFromResults(self.cosineSimilarityOfPostings(self.getTermIDsFromQuery()))
      
 if __name__ == "__main__":
-     START_TIME = time.time()
      print(Search("machine learning").returnSearchResults())
-     
-     print("--- %s seconds ---" % (time.time() - START_TIME))
