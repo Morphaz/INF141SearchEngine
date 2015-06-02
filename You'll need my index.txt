@@ -1,0 +1,9 @@
+You guys will need my index files:
+docID_mapping.txt
+termID_mapping.txt
+index.txt
+stopWords.txt
+
+As well as FileDump/docsRangingFrom 1-49955.
+I will just upload my workspace directory to Dropbox
+https://www.dropbox.com/s/chtqtw29npuxfd5/SearchEngine.rar?dl=0
