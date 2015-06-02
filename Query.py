@@ -4,9 +4,9 @@ Kyle Vonderwerth, Jenny Tang, Stephen Em
 INF 141: Search Engine Milestone 1
 Python 3.4
 '''
-from collections import namedtuple, defaultdict
+from collections import defaultdict
 from sys import exit
-import time, json
+import json
 from math import sqrt
 
 class Search(object):
