@@ -1,10 +1,9 @@
 '''
-Created on May 12, 2015
+A mess needs to be reoptimized
 Kyle Vonderwerth, Jenny Tang, Stephen Em
 INF 141: Search Engine Milestone 1
 Python 3.4
 '''
-import time
 from math import log2, log, sqrt
 from collections import defaultdict
 import json, os
@@ -118,6 +117,4 @@ class Indexer(object):
                     index.write(str(doc) + ' : ' + str(length)  + '\n')
                     
 if __name__ == "__main__":
-     START_TIME = time.time()
      Indexer('FileDump').generateIndex()
-     print("--- %s seconds ---" % (time.time() - START_TIME))
