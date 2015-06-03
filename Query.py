@@ -4,14 +4,12 @@ Kyle Vonderwerth, Jenny Tang, Stephen Em
 INF 141: Search Engine Milestone 1
 Python 3.4
 '''
-from collections import defaultdict
+from collections import namedtuple, defaultdict
 from sys import exit
 import json
 from math import sqrt
 
-class Search(object):
-     '''
-     Search.returnSearchResults() -> {rankingNumber:{url:'www.place', snippet:'context from the doc', title:'title of page'}}
+class SearchInterface(object):
      version = "0.1"
      '''
      Initialize the index
@@ -140,16 +138,22 @@ class Search(object):
                                    snippet += '...'
                gotP = False                   
                for query in self.query:
+                    print(query)
                     try:
+                         print(gotP)
                          if gotP == False:
                               position = docContext[0].index(query)
                               gotP = True
                     except:
                          continue
-               if position < 9:
-                    resultsWithContext[i]['snippet'] = '"'+' '.join(docContext[0][:position-1]) + ' ' + snippet + '"'
-               else:
-                    resultsWithContext[i]['snippet'] = '"...'+' '.join(docContext[0][position-10:position-1]) + ' ' + snippet + '"'
+               try:     
+                    if position < 9:
+                         resultsWithContext[i]['snippet'] = '"'+' '.join(docContext[0][:position-1]) + ' ' + snippet + '"'
+                    else:
+                         resultsWithContext[i]['snippet'] = '"...'+' '.join(docContext[0][position-10:position-1]) + ' ' + snippet + '"'
+               except:
+                    continue
+                    
           return resultsWithContext
      
      def returnSearchResults(self):
@@ -159,4 +163,4 @@ class Search(object):
           return self.getContextFromResults(self.cosineSimilarityOfPostings(self.getTermIDsFromQuery()))
      
 if __name__ == "__main__":
-     print(Search("machine learning").returnSearchResults())
+     print(SearchInterface("software engineering").returnSearchResults())
